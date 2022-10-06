@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <title>Password Guesser</title>
+  </head>
+  <body>
+    <main class="w-9/12 m-auto">
+      <h1
+        class="font-bold py-5 underline underline-offset-8 decoration-fuchsia-600 decoration-4"
+      >
+        Password Guesser
+      </h1>
+      <section class="mt-16">
+        <p></p>
+        <form class="flex items-start gap-6 flex-col" action="">
+          <div>
+            <label for="mots">Liste de mots :</label>
+            <input
+              class="border-gray-500 border-2 p-1 rounded-md"
+              type="text"
+            />
+          </div>
+          <div>
+            <label for="mots">Dates :</label>
+            <input
+              class="border-gray-500 border-2 p-1 rounded-md"
+              type="date"
+            />
+          </div>
+          <div>
+            <div>
+              <label>Caractères spéciaux</label>
+              <input
+                class="bg-fuchsia-600 checked:bg-fuchsia-600"
+                type="checkbox"
+              />
+            </div>
+            <div>
+              <label>Leet</label>
+              <input type="checkbox" />
+            </div>
+          </div>
+          <button
+            class="px-4 py-2 bg-fuchsia-600 hover:bg-fuchsia-500 text-white rounded-lg mt-4"
+          >
+            Valider mes informations
+          </button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
