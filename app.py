@@ -36,6 +36,14 @@ class App:
             lowercase_words.append(word.lower())
         return lowercase_words
 
+    # def word_to_lowercase_without_accent(self):
+    #     lowercase_words = []
+    #     lowercase_words_without_accent = self.remove_accent_to_words(self.words)
+        
+    #     for word in self.words:
+    #         lowercase_words.append(word.lower())
+    #     return lowercase_words
+
     def first_letter_to_uppercase(self):
         first_letter_uppercase = []
         for word in self.words:
@@ -54,7 +62,7 @@ class App:
             characters_in_leet = []
             for char in word:
                 print(self.leet_dictionnaries[char])
-                characters_in_leet.append(self.leet_dictionnaries[char])
+                characters_in_leet.append(self.leet_dictionnaries[char.lower()])
             words_in_leet.append("".join(characters_in_leet))
         return words_in_leet
 
