@@ -1,7 +1,5 @@
-from app import App
+from password import Password
 
-words = input("Ajouter une liste de mots :\n")
-appTest = App(words)
-
-# appTest.combine_words()
-appTest.convert_words_to_leet()
+word = input("Ajouter une liste de mots :\n")
+#date = input("Dates :\n")
+password = Password(word)
