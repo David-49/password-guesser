@@ -1,8 +1,6 @@
 from word import Word
 
-from word import Word
-
-class App:
+class Password:
    _word = ""
    _special_characters = False
    _leet = False

@@ -1,7 +1,6 @@
 from unidecode import unidecode
-from password import Password
 
-class Word(Password):
+class Word():
     _passwords = []
 
     _leet_dictionnaries = {

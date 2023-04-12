@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/dist/output.css" rel="stylesheet" />
+    <link href="{{url_for('static',filename='dist/css/output.css')}} rel="stylesheet" />
     <title>Password Guesser</title>
   </head>
   <body>
@@ -16,7 +16,11 @@
       </h1>
       <section class="mt-16">
         <p></p>
-        <form class="flex items-start gap-6 flex-col" action="">
+        <form
+          class="flex items-start gap-6 flex-col"
+          action="/submit"
+          method="post"
+        >
           <div>
             <label for="mots">Liste de mots :</label>
             <p>
@@ -27,6 +31,7 @@
               id="mots"
               class="border-gray-500 border-2 p-1 rounded-md"
               type="text"
+              name="mots"
             />
           </div>
           <div>
@@ -35,6 +40,7 @@
               class="border-gray-500 border-2 p-1 rounded-md"
               type="date"
               id="dates"
+              name="dates"
             />
           </div>
           <div>
@@ -50,11 +56,13 @@
               <input type="checkbox" />
             </div>
           </div>
-          <button
+          <input
+            value="Valider"
+            type="submit"
             class="px-4 py-2 bg-fuchsia-600 hover:bg-fuchsia-500 text-white rounded-lg mt-4"
           >
             Valider mes informations
-          </button>
+          </input>
         </form>
       </section>
     </main>
