@@ -22,38 +22,40 @@
           method="post"
         >
           <div>
-            <label for="mots">Liste de mots :</label>
+            <label for="words">Liste de mots :</label>
             <p>
               Exemple : prénom, nom, nom du chien, ville de naissance, couleur
               préféré, département de naissance et actuel, nom animaux
             </p>
             <input
-              id="mots"
+              id="words"
               class="border-gray-500 border-2 p-1 rounded-md"
               type="text"
-              name="mots"
+              name="words"
             />
           </div>
           <div>
-            <label for="dates">Dates :</label>
+            <label for="date">Date :</label>
             <input
               class="border-gray-500 border-2 p-1 rounded-md"
               type="date"
-              id="dates"
-              name="dates"
+              id="date"
+              name="date"
             />
           </div>
           <div>
             <div>
-              <label>Caractères spéciaux</label>
+              <label for="characters">Caractères spéciaux</label>
               <input
                 class="bg-fuchsia-600 checked:bg-fuchsia-600"
                 type="checkbox"
+                id="characters"
+                name="characters"
               />
             </div>
             <div>
-              <label>Leet</label>
-              <input type="checkbox" />
+              <label for="leet">Leet</label>
+              <input id="leet" name="leet" type="checkbox" />
             </div>
           </div>
           <input
