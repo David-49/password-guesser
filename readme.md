@@ -1,8 +1,8 @@
 ### **1. Utilisation du polymorphisme (lien dans votre code) + définition**
 
-Le polymorphisme est un concept fondamental de la programmation orientée objet (POO). Il désigne la capacité d'une méthode à prendre plusieurs formes. Plus concrètement, il s'agit de la capacité d'une classe à hériter d'une classe parente et d'implémenter ou de modifier ses méthodes selon ses propres besoins.
+Le polymorphisme est un concept de la programmation orientée objet (POO). Il désigne la capacité d'une méthode à prendre plusieurs formes. En gros, il s'agit de la capacité d'une classe à hériter d'une classe parente et d'implémenter ou de modifier ses méthodes selon ses propres besoins.
 
-**Exemple :** Les classes **WordUppercase et WordLowercase** ré-implémente la méthode **\_transform** de la classe parent **WordTransform**.
+**Exemple :** Les classes **[WordUppercase](https://github.com/David-49/password-guesser/blob/2051abfeb36a44c5159e89a8d73abf250657f657/Word/wordUppercase.py#L3)** et **[WordLowercase](https://github.com/David-49/password-guesser/blob/2051abfeb36a44c5159e89a8d73abf250657f657/Word/wordLowercase.py#L3)** ré-implémente la méthode **\_transform** de la classe parent **[WordTransform](https://github.com/David-49/password-guesser/blob/2051abfeb36a44c5159e89a8d73abf250657f657/Word/wordTransform.py#L1)**.
 
 ---
 
@@ -14,19 +14,19 @@ L'encapsulation est un concept qui permet de restreindre l'accès direct aux att
 
 Les **attributs et méthodes publics** sont accessibles depuis n'importe où dans le code. Ils sont définis sans préfixe particulier et peuvent être consultés ou modifiés librement.
 
-**Exemple :** Dans la **classe Password** par exemple les attributs ou méthodes qui ne sont pas précédés d'un underscore sont publique.
+**Exemple :** Dans la **classe Password** par exemple les attributs ou méthodes qui ne sont pas précédés d'un underscore sont publique. Exemple **[possible_combinations](https://github.com/David-49/password-guesser/blob/2051abfeb36a44c5159e89a8d73abf250657f657/password.py#L8)**
 
 #### **b. Utilisation de visibilité privée**
 
 Les **attributs et méthodes privés** sont définis en utilisant un double underscore en préfixe (par exemple, \_\_attribut). Ils sont destinés à être utilisés uniquement à l'intérieur de la classe qui les déclare, et leur accès depuis l'extérieur est bloqué.
 
-**Exemple :** Dans la **classe Word** par exemple l'attribut words est privé parce qu'il est précédé de deux underscore. Ou encore **\_\_convert_to_leet** est une méthode privé dans la classe LeetConverter
+**Exemple :** Dans la **classe LeetConverter** par exemple l'attribut **[__leet_dict](https://github.com/David-49/password-guesser/blob/2051abfeb36a44c5159e89a8d73abf250657f657/Leet/leetConverter.py#L2C5-L2C16)** est privé parce qu'il est précédé de deux underscore. Ou encore **[\_\_convert_to_leet](https://github.com/David-49/password-guesser/blob/2051abfeb36a44c5159e89a8d73abf250657f657/Leet/leetConverter.py#L19)** est une méthode privé.
 
 #### **c. Utilisation de visibilité protégée**
 
 Les **attributs et méthodes protégés** sont définis en utilisant un underscore en préfixe (par exemple, \_attribut). Ils indiquent que l'accès à ces éléments doit être restreint aux sous-classes de la classe actuelle et aux autres classes du même module.
 
-**Exemple :** Dans la **classe Password** par exemple les attributs ou méthodes qui sont précédés d'un underscore sont protégés
+**Exemple :** Dans la **classe Password** par exemple les attributs ou méthodes qui sont précédés d'un underscore sont protégés -> **[exemple](https://github.com/David-49/password-guesser/blob/2051abfeb36a44c5159e89a8d73abf250657f657/password.py#L10C4-L10C4)**
 
 ---
 
@@ -34,7 +34,8 @@ Les **attributs et méthodes protégés** sont définis en utilisant un undersco
 
 La composition est un concept de programmation orientée objet (POO) qui traite des relations entre différentes classes. Elle permet à une classe d'utiliser les fonctionnalités d'une autre classe, sans hériter de celle-ci.
 
-**Exemple :** Dans la class Word, je fais de la composition dans le constructeur en instancient les class **RemoveAccent, WordUppercase, WordLowercase et WordCapitalize.**
+**Exemple :** Dans la class Word, je fais de la composition dans le constructeur en instancient les class
+**[RemoveAccent, WordUppercase, WordLowercase et WordCapitalize](https://github.com/David-49/password-guesser/blob/2051abfeb36a44c5159e89a8d73abf250657f657/Word/word.py#L16C2-L16C2)**.
 
 ---
 
@@ -42,7 +43,8 @@ La composition est un concept de programmation orientée objet (POO) qui traite 
 
 L'héritage est le principe d'avoir une classe enfant qui hérite d'une classe parent et de ses attributs et méthodes (si pas privé)
 
-**Exemple :** Par exemple la classe **WordTransform** est une classe parent pour les classes enfant **WordUppercase et WordLowercase**.
+**Exemple :** Par exemple la classe **[WordTransform](https://github.com/David-49/password-guesser/blob/2051abfeb36a44c5159e89a8d73abf250657f657/Word/wordTransform.py#L1)** est une classe parent pour les classes enfant 
+**[WordUppercase](https://github.com/David-49/password-guesser/blob/2051abfeb36a44c5159e89a8d73abf250657f657/Word/wordUppercase.py#L3)** et **[WordLowercase](https://github.com/David-49/password-guesser/blob/2051abfeb36a44c5159e89a8d73abf250657f657/Word/wordLowercase.py#L3)**.
 
 ---
 
@@ -50,7 +52,7 @@ L'héritage est le principe d'avoir une classe enfant qui hérite d'une classe p
 
 Dans la programmation orientée objet, une interface est une collection de méthodes abstraites (méthodes sans corps) et de constantes. Une classe qui implémente une interface doit définir toutes les méthodes abstraites qui sont déclarées dans l'interface. En d'autres termes, une interface définit un contrat que les classes qui l'implémentent doivent respecter.
 
-**Exemple :** J'ai la classe WordInterface qui définit des méthodes abstracts. j'ai implémenté cette class sur Word, Word doit donc implémenter les class présente dans l'interface.
+**Exemple :** J'ai la classe **[WordInterface](https://github.com/David-49/password-guesser/blob/2051abfeb36a44c5159e89a8d73abf250657f657/Word/wordInterface.py#L3)** qui définit des méthodes abstracts. j'ai implémenté cette class sur Word, Word doit donc implémenter les class présente dans l'interface.
 
 ---
 
@@ -58,7 +60,7 @@ Dans la programmation orientée objet, une interface est une collection de méth
 
 Un attribut d'objet est une variable qui est spécifique à une instance particulière de la classe. Chaque objet a son propre ensemble de valeurs d'attributs d'objet, qui peuvent être affectées et récupérées à travers l'objet. Les attributs d'objet peuvent être initialisés lors de la création de l'objet ou lors de l'appel d'une méthode spéciale appelée constructeur.
 
-**Exemple :** Dans la classe Password, j'instancie la classe **LeetConverter** et j'utilise l'objet de class leet_converter_object pour faire appel à la méthode d'object **convert_words_to_leet**. (Ligne 34)
+**Exemple :** Dans la classe **Password**, j'instancie la classe **LeetConverter** et j'utilise l'objet de class leet_converter_object pour faire appel à la méthode d'object **[convert_words_to_leet](https://github.com/David-49/password-guesser/blob/2051abfeb36a44c5159e89a8d73abf250657f657/password.py#L34)**.
 
 ---
 
@@ -68,7 +70,7 @@ Les attributs ou méthodes statiques sont des attributs/méthodes qui sont fais 
 Un attribut statique appartient à la classe et non à un objet. Ainsi, tous les objets auront accès à cet attribut auront la même valeur.
 Les attributs statiques sont souvent utilisés pour stocker des informations globales qui sont indépendantes de toute instance de la classe. C'est la même logique pour les méthodes.
 
-**Exemple :** Dans main, je fais appel à la méthode static **encouragement** de la classe Message qui print un message.
+**Exemple :** Dans main, je fais appel à la méthode static **[encouragement](https://github.com/David-49/password-guesser/blob/2051abfeb36a44c5159e89a8d73abf250657f657/message.py#L4)** de la classe Message qui print un message.
 
 ---
 
@@ -76,4 +78,4 @@ Les attributs statiques sont souvent utilisés pour stocker des informations glo
 
 Le fonctionnement est le même que pour les attributs/méthodes static, la seule différence peut être liée à la façon dont ces attributs sont accédés. L'attribut de classe peut être accessible via les instances de la classe, ainsi que via la classe elle-même, tandis que l'attribut statique peut être accessible uniquement via la classe elle-même.
 
-**Exemple :** Dans main, je fais appel à la méthode de classe **retry** de la classe Message qui print un message.
+**Exemple :** Dans main, je fais appel à la méthode de classe **[retry](https://github.com/David-49/password-guesser/blob/2051abfeb36a44c5159e89a8d73abf250657f657/message.py#L7)** de la classe Message qui print un message.
