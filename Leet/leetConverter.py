@@ -1,5 +1,5 @@
 class LeetConverter:
-    leet_dict = {
+    __leet_dict = {
         'a': '4', 'A': '4',
         'b': '8', 'B': '8',
         'e': '3', 'E': '3',
@@ -16,11 +16,11 @@ class LeetConverter:
     def __init__(self, words):
         self._words = words
 
-    def convert_to_leet(word):
-        return ''.join(LeetConverter.leet_dict.get(c, c) for c in word)
+    def __convert_to_leet(self, word):
+        return ''.join(self.__leet_dict.get(c, c) for c in word)
     
     def convert_words_to_leet(self):
         convertedWords = []
         for word in self._words:
-            convertedWords.append(LeetConverter.convert_to_leet(word))
+            convertedWords.append(self.__convert_to_leet(word))
         return convertedWords

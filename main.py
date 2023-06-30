@@ -1,4 +1,5 @@
 from password import Password
+from message import Message
 # from flask import Flask, render_template, request
 
 """ app = Flask(__name__)
@@ -35,7 +36,7 @@ for word in words.split(','):
         wordsList.append(word.strip())
 date = "2023/04/13"
 characters = False
-leet = False
+leet = True
 dateLang = 'FR'
 
 dataForm = {
@@ -51,5 +52,6 @@ options = {
 
 password = Password(dataForm, options)
 result = password.concat_combinations();
+msg = Message()
 
-print(result)
+print(f"{result} {Message().encouragement()} {msg.retry()}")
