@@ -20,7 +20,7 @@ Les **attributs et méthodes publics** sont accessibles depuis n'importe où dan
 
 Les **attributs et méthodes privés** sont définis en utilisant un double underscore en préfixe (par exemple, \_\_attribut). Ils sont destinés à être utilisés uniquement à l'intérieur de la classe qui les déclare, et leur accès depuis l'extérieur est bloqué.
 
-**Exemple :** Dans la **classe Word** par exemple l'attribut words est privé parce qu'il est précédé de deux underscore. Ou encore \_\_convert_to_leet est une méthode privé dans la classe LeetConverter
+**Exemple :** Dans la **classe Word** par exemple l'attribut words est privé parce qu'il est précédé de deux underscore. Ou encore **\_\_convert_to_leet** est une méthode privé dans la classe LeetConverter
 
 #### **c. Utilisation de visibilité protégée**
 
@@ -34,7 +34,7 @@ Les **attributs et méthodes protégés** sont définis en utilisant un undersco
 
 La composition est un concept de programmation orientée objet (POO) qui traite des relations entre différentes classes. Elle permet à une classe d'utiliser les fonctionnalités d'une autre classe, sans hériter de celle-ci.
 
-**Exemple :** Dans la class Word, je fais de la composition dans le constructeur en instancient les class RemoveAccent, WordUppercase, WordLowercase et WordCapitalize.
+**Exemple :** Dans la class Word, je fais de la composition dans le constructeur en instancient les class **RemoveAccent, WordUppercase, WordLowercase et WordCapitalize.**
 
 ---
 
@@ -58,7 +58,7 @@ Dans la programmation orientée objet, une interface est une collection de méth
 
 Un attribut d'objet est une variable qui est spécifique à une instance particulière de la classe. Chaque objet a son propre ensemble de valeurs d'attributs d'objet, qui peuvent être affectées et récupérées à travers l'objet. Les attributs d'objet peuvent être initialisés lors de la création de l'objet ou lors de l'appel d'une méthode spéciale appelée constructeur.
 
-**Exemple :** Dans la classe Password, j'instancie la classe **LeetConverter** et j'utilise l'objet de class leet_converter_object pour faire appel à la méthode d'object convert_words_to_leet. (Ligne 34)
+**Exemple :** Dans la classe Password, j'instancie la classe **LeetConverter** et j'utilise l'objet de class leet_converter_object pour faire appel à la méthode d'object **convert_words_to_leet**. (Ligne 34)
 
 ---
 
